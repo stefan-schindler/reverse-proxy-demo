@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+  hello-world:
+    image: dockerbogo/docker-nginx-hello-world
+    ports:
+      - "8009:80"
